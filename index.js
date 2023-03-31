@@ -12,6 +12,9 @@ module.exports = {
       )
       .join(' ')
   ),
+  toSlug: source => (
+    source.toLowerCase().trim().replace(/ /, '-')
+  ),
   toDollar: number => {
     const dollar = new Intl.NumberFormat('en-US', {
       style: 'currency',
