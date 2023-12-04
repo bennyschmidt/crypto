@@ -3,10 +3,6 @@
 const pluralize = word => {
   word = word.toLowerCase().trim();
 
-  if (IRREGULAR_PLURALS[word]) {
-    return IRREGULAR_PLURALS[word];
-  }
-
   if (word.length >= 2 && VOWELS.includes(word[word.length - 2])) {
     return `${word}s`;
   }
